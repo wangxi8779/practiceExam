@@ -30,7 +30,7 @@ void Casual::work(int mins) {
 float Casual::pay() {
   float amount = 0;
   for(int i = 0; i < 7; i++) {
-    amount = hoursWorked[i] * payRate;
+    amount += hoursWorked[i] * payRate;
     hoursWorked[i] = 0;
   }
   dayCount = 0;
