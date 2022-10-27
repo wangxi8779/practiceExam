@@ -7,16 +7,16 @@ Manager::Manager() {}
 Manager::Manager(int rate)
 {
   payRate = rate;
-  energyLevel = 1;
+  energyLevel = 100;
 }
 
 void Manager::work(int mins) {
-  float energy = mins * 0.005;
+  float energy = mins * 0.25;
   if (energy > energyLevel) {
-    mins = energyLevel/0.0025;
+    mins = energyLevel/0.25;
     energyLevel = 0;
   } else {
-    energyLevel -= mins * 0.0025;
+    energyLevel -= mins * 0.25;
   }
 
   float hours = mins / 60.0;

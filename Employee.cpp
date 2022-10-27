@@ -9,11 +9,11 @@ Employee::Employee() {
 Employee::Employee(int rate)
 {
   payRate = rate;
-  energyLevel = 1;
+  energyLevel = 100;
 }
 
 void Employee::takeABreak(int mins) {
-  energyLevel += mins * 0.02;
+  energyLevel += mins * 2;
 }
 void Employee::set_payRate(int rate) {payRate = rate;}
 int Employee::get_payRate() {return payRate;}

@@ -7,17 +7,17 @@ Casual::Casual() {}
 Casual::Casual(int rate)
 {
   payRate = rate;
-  energyLevel = 1;
+  energyLevel = 100;
   dayCount = 0;
 }
 
 void Casual::work(int mins) {
-  float energy = mins * 0.005;
+  float energy = mins * 0.5;
   if (energy > energyLevel) {
-    mins = energyLevel/0.005;
+    mins = energyLevel/0.5;
     energyLevel = 0;
   } else {
-    energyLevel -= mins * 0.005;
+    energyLevel -= mins * 0.5;
   }
 
   if (dayCount > 4) {
